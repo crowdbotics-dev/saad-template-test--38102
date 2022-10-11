@@ -5,7 +5,7 @@ import PropTypes from "prop-types";
 import AppIntroSlider from "react-native-app-intro-slider";
 
 const Onboarding = ({
-  slidesData,
+  // slidesData,
   onDone,
   onSkip,
   onSlideChange,
@@ -29,6 +29,23 @@ const Onboarding = ({
   titleStyle = {},
   descriptionStyle = {}
 }) => {
+  const slidesData = [
+    {
+      key : 1,
+      title: "Title 1",
+      description: "Description.\nSay something cool",
+      imageURL: "https://crowdbotics-slack-dev.s3.amazonaws.com/media/project_component_resources/cb-icon.png",
+      backgroundColor: "#59b2ab"
+    },
+    {
+      key : 2,
+      title: "Title 2",
+      description: "Description.\nSay something cool",
+      imageURL: "https://crowdbotics-slack-dev.s3.amazonaws.com/media/project_component_resources/cb-icon.png",
+      backgroundColor: "#b2ab"
+    },
+    
+  ]
   const renderItem = ({ item, index }) => {
     return (
       <View style={[styles.slide, { backgroundColor: item.backgroundColor }]} key={index}>
